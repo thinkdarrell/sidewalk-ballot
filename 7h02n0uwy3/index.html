@@ -56,9 +56,13 @@ h1.t-l{font-size:26px}
 }
 .ballot{padding:4px 18px 24px; text-align:left}
 .scalekey{
-  text-align:center; font-size:11px; line-height:1.9;
-  letter-spacing:.12em; text-transform:uppercase; color:var(--dim);
-  padding:8px 2px 14px; font-weight:600;
+  text-align:center; font-size:19px; line-height:1.3;
+  font-stretch:75%; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--ink); padding:8px 2px 16px; font-weight:800;
+}
+.scalekey .skipnote{
+  display:block; font-size:11px; font-stretch:100%; letter-spacing:.12em;
+  color:var(--dim); font-weight:600; margin-top:6px;
 }
 .film{margin-bottom:18px}
 .film h3{font-size:15px; font-weight:700; margin-bottom:8px; overflow-wrap:anywhere}
@@ -133,7 +137,7 @@ h1.t-l{font-size:26px}
 <span class="when">Wed, Aug 26 · 6:15 PM</span>
 </div>
 <div class="ballot" id="ballot" data-action="https://docs.google.com/forms/d/e/1FAIpQLScuyPRPubA8XNLw1xSufMO4wDEDwe1uWaGpjrRiB9Z3mmniRw/formResponse">
-<div class="scalekey">1 · Not for me &nbsp;—&nbsp; 5 · Loved it<br>Skip any films you missed</div>
+<div class="scalekey">1 · Not for me &nbsp;—&nbsp; 5 · Loved it<span class="skipnote">Skip any films you missed</span></div>
 <div class="film" data-entry="1221748305"><h3>Spilled Milk</h3><div class="scale" role="group" aria-label="Rating for Spilled Milk"><button type="button" data-v="1" aria-label="1 out of 5">1</button><button type="button" data-v="2" aria-label="2 out of 5">2</button><button type="button" data-v="3" aria-label="3 out of 5">3</button><button type="button" data-v="4" aria-label="4 out of 5">4</button><button type="button" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="film" data-entry="151682777"><h3>Dreamwalker</h3><div class="scale" role="group" aria-label="Rating for Dreamwalker"><button type="button" data-v="1" aria-label="1 out of 5">1</button><button type="button" data-v="2" aria-label="2 out of 5">2</button><button type="button" data-v="3" aria-label="3 out of 5">3</button><button type="button" data-v="4" aria-label="4 out of 5">4</button><button type="button" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="film" data-entry="1891931939"><h3>Eternal</h3><div class="scale" role="group" aria-label="Rating for Eternal"><button type="button" data-v="1" aria-label="1 out of 5">1</button><button type="button" data-v="2" aria-label="2 out of 5">2</button><button type="button" data-v="3" aria-label="3 out of 5">3</button><button type="button" data-v="4" aria-label="4 out of 5">4</button><button type="button" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="film" data-entry="120693000"><h3>Wall of Sound</h3><div class="scale" role="group" aria-label="Rating for Wall of Sound"><button type="button" data-v="1" aria-label="1 out of 5">1</button><button type="button" data-v="2" aria-label="2 out of 5">2</button><button type="button" data-v="3" aria-label="3 out of 5">3</button><button type="button" data-v="4" aria-label="4 out of 5">4</button><button type="button" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="film" data-entry="1139123462"><h3>Free Joan Little</h3><div class="scale" role="group" aria-label="Rating for Free Joan Little"><button type="button" data-v="1" aria-label="1 out of 5">1</button><button type="button" data-v="2" aria-label="2 out of 5">2</button><button type="button" data-v="3" aria-label="3 out of 5">3</button><button type="button" data-v="4" aria-label="4 out of 5">4</button><button type="button" data-v="5" aria-label="5 out of 5">5</button></div></div>
 <button class="cast" id="cast" disabled>Cast Your Ballot</button>
 </div>
