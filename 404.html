@@ -23,7 +23,7 @@ body{
 }
 a{color:inherit}
 .stub{
-  width:100%; max-width:420px; background:var(--card);
+  width:100%; max-width:460px; background:var(--card);
   border:1px solid var(--edge); border-radius:14px; overflow:hidden;
   animation:rise .45s ease-out both;
 }
@@ -36,7 +36,7 @@ a{color:inherit}
   font-weight:600;
 }
 .stub-head .fest{color:var(--yellow)}
-.bill{padding:30px 22px 26px; text-align:center}
+.bill{padding:28px 22px 18px; text-align:center}
 .eyebrow{
   font-size:11px; letter-spacing:.24em; text-transform:uppercase;
   color:var(--dim); font-weight:600; margin-bottom:14px;
@@ -52,19 +52,50 @@ h1.t-l{font-size:26px}
 .when{
   display:inline-block; font-size:13px; font-weight:600; letter-spacing:.08em;
   color:var(--ink); border:1px solid var(--edge); border-radius:999px;
-  padding:6px 14px; margin-bottom:26px;
+  padding:6px 14px;
 }
+.ballot{padding:4px 18px 24px; text-align:left}
+.scalekey{
+  text-align:center; font-size:11px; line-height:1.9;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--dim);
+  padding:8px 2px 14px; font-weight:600;
+}
+.film{margin-bottom:18px}
+.film h3{font-size:15px; font-weight:700; margin-bottom:8px; overflow-wrap:anywhere}
+.scale{display:grid; grid-template-columns:repeat(5,1fr); gap:7px}
+.scale button{
+  height:46px; font:inherit; font-weight:700; font-size:16px;
+  background:none; border:1px solid var(--edge); border-radius:8px;
+  color:var(--ink); cursor:pointer;
+}
+.scale button.sel{background:var(--yellow); border-color:var(--yellow); color:#0b0b0c}
+.scale button:focus-visible{outline:3px solid var(--coral); outline-offset:2px}
+.cast{
+  display:block; width:100%; margin-top:22px;
+  background:var(--yellow); color:#0b0b0c; border:0; cursor:pointer;
+  font-family:inherit; font-stretch:72%; font-weight:800; text-transform:uppercase;
+  font-size:22px; letter-spacing:.05em; padding:20px 16px; border-radius:10px;
+}
+.cast:disabled{background:#3a3a40; color:#77777d; cursor:default}
+.cast:not(:disabled):active{transform:translateY(1px)}
 .vote{
   display:block; background:var(--yellow); color:#0b0b0c; text-decoration:none;
-  font-stretch:72%; font-weight:800; text-transform:uppercase;
-  font-size:22px; letter-spacing:.05em;
-  padding:20px 16px; border-radius:10px;
+  font-stretch:72%; font-weight:800; text-transform:uppercase; text-align:center;
+  font-size:22px; letter-spacing:.05em; padding:20px 16px; border-radius:10px;
 }
-.vote:active{transform:translateY(1px)}
-.vote:focus-visible,.support a:focus-visible,.site:focus-visible{
+.thanks{padding:36px 22px 40px; text-align:center}
+.thanks h2{
+  font-stretch:66%; font-weight:800; text-transform:uppercase;
+  font-size:34px; color:var(--yellow); margin-bottom:10px;
+}
+.thanks p{font-size:14px; color:var(--dim)}
+.fallback{text-align:center; padding:0 22px 20px}
+.fallback a{color:var(--yellow)}
+.vote:focus-visible,.cast:focus-visible,.support a:focus-visible,
+.site:focus-visible,.fallback a:focus-visible{
   outline:3px solid var(--coral); outline-offset:3px;
 }
-.hint{font-size:13px; color:var(--dim); margin-top:12px}
+.hint{font-size:13px; color:var(--dim); margin-top:12px; margin-bottom:18px}
 .perf{position:relative; border-top:2px dashed #3a3a40; margin:0 -1px}
 .perf::before,.perf::after{
   content:""; position:absolute; top:-11px; width:20px; height:20px;

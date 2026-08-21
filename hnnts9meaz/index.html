@@ -23,7 +23,7 @@ body{
 }
 a{color:inherit}
 .stub{
-  width:100%; max-width:420px; background:var(--card);
+  width:100%; max-width:460px; background:var(--card);
   border:1px solid var(--edge); border-radius:14px; overflow:hidden;
   animation:rise .45s ease-out both;
 }
@@ -36,7 +36,7 @@ a{color:inherit}
   font-weight:600;
 }
 .stub-head .fest{color:var(--yellow)}
-.bill{padding:30px 22px 26px; text-align:center}
+.bill{padding:28px 22px 18px; text-align:center}
 .eyebrow{
   font-size:11px; letter-spacing:.24em; text-transform:uppercase;
   color:var(--dim); font-weight:600; margin-bottom:14px;
@@ -52,19 +52,50 @@ h1.t-l{font-size:26px}
 .when{
   display:inline-block; font-size:13px; font-weight:600; letter-spacing:.08em;
   color:var(--ink); border:1px solid var(--edge); border-radius:999px;
-  padding:6px 14px; margin-bottom:26px;
+  padding:6px 14px;
 }
+.ballot{padding:4px 18px 24px; text-align:left}
+.scalekey{
+  text-align:center; font-size:11px; line-height:1.9;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--dim);
+  padding:8px 2px 14px; font-weight:600;
+}
+.film{margin-bottom:18px}
+.film h3{font-size:15px; font-weight:700; margin-bottom:8px; overflow-wrap:anywhere}
+.scale{display:grid; grid-template-columns:repeat(5,1fr); gap:7px}
+.scale button{
+  height:46px; font:inherit; font-weight:700; font-size:16px;
+  background:none; border:1px solid var(--edge); border-radius:8px;
+  color:var(--ink); cursor:pointer;
+}
+.scale button.sel{background:var(--yellow); border-color:var(--yellow); color:#0b0b0c}
+.scale button:focus-visible{outline:3px solid var(--coral); outline-offset:2px}
+.cast{
+  display:block; width:100%; margin-top:22px;
+  background:var(--yellow); color:#0b0b0c; border:0; cursor:pointer;
+  font-family:inherit; font-stretch:72%; font-weight:800; text-transform:uppercase;
+  font-size:22px; letter-spacing:.05em; padding:20px 16px; border-radius:10px;
+}
+.cast:disabled{background:#3a3a40; color:#77777d; cursor:default}
+.cast:not(:disabled):active{transform:translateY(1px)}
 .vote{
   display:block; background:var(--yellow); color:#0b0b0c; text-decoration:none;
-  font-stretch:72%; font-weight:800; text-transform:uppercase;
-  font-size:22px; letter-spacing:.05em;
-  padding:20px 16px; border-radius:10px;
+  font-stretch:72%; font-weight:800; text-transform:uppercase; text-align:center;
+  font-size:22px; letter-spacing:.05em; padding:20px 16px; border-radius:10px;
 }
-.vote:active{transform:translateY(1px)}
-.vote:focus-visible,.support a:focus-visible,.site:focus-visible{
+.thanks{padding:36px 22px 40px; text-align:center}
+.thanks h2{
+  font-stretch:66%; font-weight:800; text-transform:uppercase;
+  font-size:34px; color:var(--yellow); margin-bottom:10px;
+}
+.thanks p{font-size:14px; color:var(--dim)}
+.fallback{text-align:center; padding:0 22px 20px}
+.fallback a{color:var(--yellow)}
+.vote:focus-visible,.cast:focus-visible,.support a:focus-visible,
+.site:focus-visible,.fallback a:focus-visible{
   outline:3px solid var(--coral); outline-offset:3px;
 }
-.hint{font-size:13px; color:var(--dim); margin-top:12px}
+.hint{font-size:13px; color:var(--dim); margin-top:12px; margin-bottom:18px}
 .perf{position:relative; border-top:2px dashed #3a3a40; margin:0 -1px}
 .perf::before,.perf::after{
   content:""; position:absolute; top:-11px; width:20px; height:20px;
@@ -94,13 +125,58 @@ h1.t-l{font-size:26px}
 <body>
 <main class="stub">
 <div class="stub-head"><span class="fest">Sidewalk 28</span><span>Admit One</span></div>
-<div class="bill">
+<div class="bill" id="bill">
 <p class="eyebrow">Audience Ballot</p>
 <h1 class="t-s">Last Shot</h1>
 <span class="when">Sun, Aug 30 · 10:00 AM</span>
-<a class="vote" href="https://docs.google.com/forms/d/e/1FAIpQLScIcE0wwGAb2jELaE99TBcCc7fwZVk4mOFNSuTWpkDMpdvEow/viewform" data-umami-event="vote_click">Cast Your Ballot</a>
-<p class="hint">Takes under a minute — rate what you just watched.</p>
 </div>
+<div class="ballot" id="ballot" data-action="https://docs.google.com/forms/d/e/1FAIpQLScIcE0wwGAb2jELaE99TBcCc7fwZVk4mOFNSuTWpkDMpdvEow/formResponse">
+<div class="scalekey">1 · Not for me &nbsp;—&nbsp; 10 · Loved it</div>
+<div class="film" data-entry="1707544766"><h3>Last Shot</h3><div class="scale" role="group" aria-label="Rating for Last Shot"><button type="button" data-v="1" aria-label="1 out of 10">1</button><button type="button" data-v="2" aria-label="2 out of 10">2</button><button type="button" data-v="3" aria-label="3 out of 10">3</button><button type="button" data-v="4" aria-label="4 out of 10">4</button><button type="button" data-v="5" aria-label="5 out of 10">5</button><button type="button" data-v="6" aria-label="6 out of 10">6</button><button type="button" data-v="7" aria-label="7 out of 10">7</button><button type="button" data-v="8" aria-label="8 out of 10">8</button><button type="button" data-v="9" aria-label="9 out of 10">9</button><button type="button" data-v="10" aria-label="10 out of 10">10</button></div></div>
+<button class="cast" id="cast" disabled>Cast Your Ballot</button>
+</div>
+<div class="thanks" id="thanks" hidden>
+<h2>Ballot Cast</h2>
+<p>Thank you — your votes are in.</p>
+</div>
+<p class="hint fallback">Trouble voting? <a href="https://docs.google.com/forms/d/e/1FAIpQLScIcE0wwGAb2jELaE99TBcCc7fwZVk4mOFNSuTWpkDMpdvEow/viewform" data-umami-event="vote_fallback_click">Open the ballot directly</a>.</p>
+<noscript><p class="hint fallback"><a href="https://docs.google.com/forms/d/e/1FAIpQLScIcE0wwGAb2jELaE99TBcCc7fwZVk4mOFNSuTWpkDMpdvEow/viewform">Open the ballot</a> to vote.</p></noscript>
+<iframe name="hf" id="hf" hidden></iframe>
+<script>
+document.querySelectorAll('.scale').forEach(function(g){
+  g.addEventListener('click',function(ev){
+    var b=ev.target.closest('button'); if(!b) return;
+    var was=b.classList.contains('sel');
+    g.querySelectorAll('button').forEach(function(x){x.classList.remove('sel');});
+    if(!was) b.classList.add('sel');
+    document.getElementById('cast').disabled =
+      document.querySelectorAll('.scale .sel').length===0;
+  });
+});
+document.getElementById('cast').addEventListener('click',function(){
+  var cast=this; cast.disabled=true; cast.textContent='Casting…';
+  var f=document.createElement('form');
+  f.method='POST'; f.action=document.getElementById('ballot').dataset.action; f.target='hf';
+  document.querySelectorAll('.film').forEach(function(film){
+    var sel=film.querySelector('.sel'); if(!sel) return;
+    var i=document.createElement('input');
+    i.type='hidden'; i.name='entry.'+film.dataset.entry; i.value=sel.dataset.v;
+    f.appendChild(i);
+  });
+  document.body.appendChild(f);
+  var done=false;
+  var fin=function(){
+    if(done) return; done=true;
+    document.getElementById('ballot').hidden=true;
+    document.getElementById('thanks').hidden=false;
+    window.scrollTo(0,0);
+    if(window.umami) umami.track('vote_submit');
+  };
+  document.getElementById('hf').addEventListener('load',fin);
+  setTimeout(fin,2500);
+  f.submit();
+});
+</script>
 <div class="perf"></div>
 <div class="support">
 <h2>Keep Sidewalk Rolling</h2>
