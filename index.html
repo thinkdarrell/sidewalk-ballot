@@ -66,13 +66,13 @@ h1.t-l{font-size:26px}
 }
 .film{margin-bottom:18px}
 .film h3{font-size:15px; font-weight:700; margin-bottom:8px; overflow-wrap:anywhere}
-.scale{display:grid; grid-template-columns:repeat(5,1fr); gap:8px}
+.scale{display:flex; justify-content:center; gap:10px}
 .scale button{
-  height:54px; font:inherit; font-weight:700; font-size:18px;
-  background:none; border:1px solid var(--edge); border-radius:8px;
-  color:var(--ink); cursor:pointer; padding:0;
+  height:56px; width:56px; font-size:40px; line-height:1;
+  background:none; border:0; border-radius:8px; padding:0;
+  color:#3f3f45; cursor:pointer;
 }
-.scale button.sel{background:var(--yellow); border-color:var(--yellow); color:#0b0b0c}
+.scale button.sel{color:var(--yellow)}
 .scale button:focus-visible{outline:3px solid var(--coral); outline-offset:2px}
 .cast{
   display:block; width:100%; margin-top:22px;
