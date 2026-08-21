@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0b0c">
+<title>You Fuckers Figure It Out: A Jason Molina Story — Sidewalk 28 Ballot</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0c; --card:#131315; --edge:#2a2a2e; --ink:#fafaf6;
+  --dim:#9a9aa0; --yellow:#fffd67; --coral:#f3827f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'Archivo',system-ui,-apple-system,sans-serif;
+  min-height:100svh; display:flex; align-items:center; justify-content:center;
+  padding:20px 16px;
+  background-image:radial-gradient(120% 90% at 50% 0%, #17171a 0%, var(--bg) 60%);
+}
+a{color:inherit}
+.stub{
+  width:100%; max-width:420px; background:var(--card);
+  border:1px solid var(--edge); border-radius:14px; overflow:hidden;
+  animation:rise .45s ease-out both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.stub{animation:none}}
+.stub-head{
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding:14px 22px 12px; border-bottom:1px solid var(--edge);
+  font-size:11px; letter-spacing:.22em; color:var(--dim); text-transform:uppercase;
+  font-weight:600;
+}
+.stub-head .fest{color:var(--yellow)}
+.bill{padding:30px 22px 26px; text-align:center}
+.eyebrow{
+  font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--dim); font-weight:600; margin-bottom:14px;
+}
+h1{
+  font-stretch:66%; font-weight:800; text-transform:uppercase;
+  line-height:.98; letter-spacing:.01em; overflow-wrap:anywhere;
+  margin-bottom:16px;
+}
+h1.t-s{font-size:44px}
+h1.t-m{font-size:34px}
+h1.t-l{font-size:26px}
+.when{
+  display:inline-block; font-size:13px; font-weight:600; letter-spacing:.08em;
+  color:var(--ink); border:1px solid var(--edge); border-radius:999px;
+  padding:6px 14px; margin-bottom:26px;
+}
+.vote{
+  display:block; background:var(--yellow); color:#0b0b0c; text-decoration:none;
+  font-stretch:72%; font-weight:800; text-transform:uppercase;
+  font-size:22px; letter-spacing:.05em;
+  padding:20px 16px; border-radius:10px;
+}
+.vote:active{transform:translateY(1px)}
+.vote:focus-visible,.support a:focus-visible,.site:focus-visible{
+  outline:3px solid var(--coral); outline-offset:3px;
+}
+.hint{font-size:13px; color:var(--dim); margin-top:12px}
+.perf{position:relative; border-top:2px dashed #3a3a40; margin:0 -1px}
+.perf::before,.perf::after{
+  content:""; position:absolute; top:-11px; width:20px; height:20px;
+  border-radius:50%; background:var(--bg); border:1px solid var(--edge);
+}
+.perf::before{left:-11px}
+.perf::after{right:-11px}
+.support{padding:24px 22px 26px; text-align:center}
+.support h2{
+  font-stretch:72%; font-weight:800; text-transform:uppercase;
+  font-size:16px; letter-spacing:.06em; color:var(--coral); margin-bottom:8px;
+}
+.support p{font-size:14px; color:var(--dim); line-height:1.5; margin-bottom:18px}
+.support .row{display:flex; gap:10px}
+.support .row a{
+  flex:1; display:block; text-decoration:none; font-weight:700; font-size:14px;
+  padding:13px 8px; border-radius:8px; border:1px solid var(--edge); color:var(--ink);
+}
+.support .row a.donate{border-color:var(--coral); color:var(--coral)}
+.site{
+  display:block; text-align:center; font-size:12px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--dim); text-decoration:none;
+  padding:14px; border-top:1px solid var(--edge);
+}
+</style>
+</head>
+<body>
+<main class="stub">
+<div class="stub-head"><span class="fest">Sidewalk 28</span><span>Admit One</span></div>
+<div class="bill">
+<p class="eyebrow">Audience Ballot</p>
+<h1 class="t-l">You Fuckers Figure It Out: A Jason Molina Story</h1>
+<span class="when">Sat, Aug 29 · 9:45 PM</span>
+<a class="vote" href="https://docs.google.com/forms/d/e/1FAIpQLSdLZCG4fHsrgcWl4eWFIt181ABAQGMmohE0HRHQtnoztNOo6g/viewform" data-umami-event="vote_click">Cast Your Ballot</a>
+<p class="hint">Takes under a minute — rate what you just watched.</p>
+</div>
+<div class="perf"></div>
+<div class="support">
+<h2>Keep Sidewalk Rolling</h2>
+<p>Sidewalk is a nonprofit. Nights like this happen because people chip in.</p>
+<div class="row">
+<a class="donate" href="https://sidewalkfest.com/get-involved/donate/" data-umami-event="donate_click">Donate</a>
+<a href="https://sidewalkfest.com/get-involved/membership/" data-umami-event="member_click">Become a Member</a>
+</div>
+</div>
+<a class="site" href="https://sidewalkfest.com/">sidewalkfest.com</a>
+</main>
+</body>
+</html>
